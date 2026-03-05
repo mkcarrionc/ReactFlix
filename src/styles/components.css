@@ -1,0 +1,411 @@
+/* styles/components.css */
+
+/* Header */
+.header {
+  background-color: #000000;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #333;
+}
+
+.header__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  text-decoration: none;
+  color: #e50914;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header__logo span {
+  color: #ffffff;
+}
+
+.header__nav-list {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.header__nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.header__nav-link:hover {
+  color: #e50914;
+}
+
+.header__nav-link--active {
+  color: #e50914;
+  font-weight: bold;
+}
+
+.header__user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__user-icon {
+  font-size: 24px;
+}
+
+/* Footer */
+.footer {
+  background-color: #000000;
+  padding: 40px 0 20px;
+  margin-top: 40px;
+}
+
+.footer__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.footer__title {
+  color: #e50914;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer__subtitle {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer__list {
+  list-style: none;
+}
+
+.footer__item {
+  color: #999;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer__item:hover {
+  color: #e50914;
+}
+
+.footer__copyright {
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  grid-column: 1 / -1;
+  margin-top: 30px;
+}
+
+/* Pelicula Card */
+.pelicula-card {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.pelicula-card:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.pelicula-card__image-container {
+  position: relative;
+  aspect-ratio: 2/3;
+  overflow: hidden;
+}
+
+.pelicula-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.pelicula-card:hover .pelicula-card__image {
+  transform: scale(1.1);
+}
+
+.pelicula-card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.pelicula-card:hover .pelicula-card__overlay {
+  opacity: 1;
+}
+
+.pelicula-card__trailer-btn {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.pelicula-card__trailer-btn:hover {
+  background-color: #f40612;
+}
+
+.pelicula-card__content {
+  padding: 15px;
+}
+
+.pelicula-card__title {
+  font-size: 16px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pelicula-card__meta {
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.pelicula-card__rating {
+  color: #ffd700;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.pelicula-card__details-btn {
+  background-color: transparent;
+  color: #e50914;
+  border: 1px solid #e50914;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.pelicula-card__details-btn:hover {
+  background-color: #e50914;
+  color: white;
+}
+
+/* Pelicula Grid */
+.pelicula-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.pelicula-grid__empty {
+  text-align: center;
+  padding: 50px;
+  color: #999;
+}
+
+/* Search Bar */
+.search-bar {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search-bar__input {
+  width: 100%;
+  padding: 15px 50px 15px 20px;
+  font-size: 16px;
+  background-color: #333;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: white;
+  transition: border-color 0.3s;
+}
+
+.search-bar__input:focus {
+  outline: none;
+  border-color: #e50914;
+}
+
+.search-bar__icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #999;
+}
+
+/* Category Filter */
+.category-filter {
+  margin-bottom: 20px;
+}
+
+.category-filter__select {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 16px;
+  background-color: #333;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.category-filter__select:focus {
+  outline: none;
+  border-color: #e50914;
+}
+
+/* Buttons */
+.alquiler-button,
+.compra-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.alquiler-button {
+  background-color: #2196f3;
+  color: white;
+}
+
+.alquiler-button:hover:not(:disabled) {
+  background-color: #1976d2;
+}
+
+.compra-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.compra-button:hover:not(:disabled) {
+  background-color: #388e3c;
+}
+
+.alquiler-button:disabled,
+.compra-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal__content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.modal__close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.modal__close:hover {
+  color: #e50914;
+}
+
+.modal__title {
+  margin-bottom: 20px;
+  color: #e50914;
+}
+
+.modal__video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.modal__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+.loading-spinner__circle {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #333;
+  border-top-color: #e50914;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner__text {
+  margin-top: 15px;
+  color: #999;
+}

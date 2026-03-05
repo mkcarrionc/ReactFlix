@@ -1,0 +1,257 @@
+/* styles/pages.css */
+
+/* Home Page */
+.principal-page__hero {
+  background: linear-gradient(to right, #000000, #434343);
+  padding: 80px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(67,67,67,1)), url('https://static.wixstatic.com/media/140221_318f12801e1c4df2b0a6ef37787b6c34~mv2.jpg/v1/fill/w_1920,h_1080,al_c,q_90,enc_auto/140221_318f12801e1c4df2b0a6ef37787b6c34~mv2.jpg');
+}
+
+.principal-page__title {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #e50914;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.principal-page__subtitle {
+  font-size: 20px;
+  color: #999;
+  max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.principal-page__section-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+/* Peliculas Page */
+.peliculas-page {
+  padding: 20px 0;
+}
+
+.peliculas-page__title {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #e50914;
+}
+
+.peliculas-page__filters {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.peliculas-page__results {
+  color: #999;
+  margin-bottom: 20px;
+}
+
+/* Pelicula Detail Page */
+.pelicula-detail {
+  padding: 20px 0;
+}
+
+.pelicula-detail__container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  padding: 30px;
+}
+
+.pelicula-detail__image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.pelicula-detail__info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pelicula-detail__title {
+  font-size: 36px;
+  color: #e50914;
+}
+
+.pelicula-detail__meta {
+  display: flex;
+  gap: 20px;
+  color: #999;
+  font-size: 16px;
+}
+
+.pelicula-detail__genre,
+.pelicula-detail__duration,
+.pelicula-detail__rating {
+  padding-left: 10px;
+  border-left: 1px solid #333;
+}
+
+.pelicula-detail__rating {
+  color: #ffd700;
+}
+
+.pelicula-detail__director,
+.pelicula-detail__cast,
+.pelicula-detail__language {
+  line-height: 1.8;
+}
+
+.pelicula-detail__synopsis h3 {
+  color: #e50914;
+  margin-bottom: 10px;
+}
+
+.pelicula-detail__synopsis p {
+  color: #999;
+  line-height: 1.6;
+}
+
+.pelicula-detail__actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.pelicula-detail__trailer-btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.pelicula-detail__trailer-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.pelicula-detail__not-found {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.pelicula-detail__not-found h2 {
+  color: #e50914;
+  margin-bottom: 20px;
+}
+
+.pelicula-detail__back-btn {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.pelicula-detail__back-btn:hover {
+  background-color: #f40612;
+}
+
+/* My Alquileres Page */
+.gestion-alquileres-page,
+.gestion-compras-page {
+  padding: 20px 0;
+}
+
+.gestion-alquileres-page__title,
+.gestion-compras-page__title {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #e50914;
+}
+
+.gestion-alquileres-page__empty,
+.gestion-compras-page__empty {
+  text-align: center;
+  padding: 50px;
+  color: #999;
+  background-color: #1f1f1f;
+  border-radius: 8px;
+}
+
+.gestion-alquileres-page__actions {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.gestion-alquileres-page__extend-btn {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  width: 100%;
+  max-width: 300px;
+}
+
+.gestion-alquileres-page__extend-btn:hover {
+  background-color: #f57c00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header__container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .header__nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .footer__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .peliculas-page__filters {
+    grid-template-columns: 1fr;
+  }
+
+  .pelicula-detail__container {
+    grid-template-columns: 1fr;
+  }
+
+  .pelicula-detail__image {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .pelicula-detail__meta {
+    flex-wrap: wrap;
+  }
+
+  .pelicula-detail__actions {
+    flex-direction: column;
+  }
+
+  .principal-page__title {
+    font-size: 32px;
+  }
+}
