@@ -15,7 +15,7 @@ const PeliculaCard = ({ pelicula }) => {
       <article className="pelicula-card">
         <div className="pelicula-card__image-container">
           <img 
-            src={imageError ? 'https://via.placeholder.com/300x450?text=No+Image' : pelicula.image} 
+            src={imageError ? 'https://img.freepik.com/vector-premium/emoji-cara-nula-ilustracion_1272837-162.jpg' : pelicula.image} 
             alt={pelicula.title}
             className="pelicula-card__image"
             onError={handleImageError}
@@ -52,5 +52,6 @@ const PeliculaCard = ({ pelicula }) => {
     </>
   );
 };
+
 
 export default PeliculaCard;
