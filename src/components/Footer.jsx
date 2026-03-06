@@ -21,19 +21,20 @@ const Footer = () => {
         <div className="footer__section">
           <h4 className="footer__subtitle">Contacto</h4>
           <ul className="footer__list">
-            <li className="footer__item">Email: info@streamflix.com</li>
-            <li className="footer__item">Tel: +34 123 456 789</li>
+            <li className="footer__item">Email: info@reactflix.com</li>
+            <li className="footer__item">Tel: +51 123 456 789</li>
           </ul>
         </div>
         
         <div className="footer__section">
           <p className="footer__copyright">
-            &copy; 2024 ReactFlix. Todos los derechos reservados.
+            &copy; 2026 ReactFlix. Todos los derechos reservados.
           </p>
         </div>
       </div>
     </footer>
   );
 };
+
 
 export default Footer;
