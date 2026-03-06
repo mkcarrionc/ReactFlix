@@ -10,7 +10,7 @@ const RentalButton = ({ pelicula, onRent }) => {
     setTimeout(() => {
       onRent(pelicula);
       setIsRenting(false);
-      alert(`Has alquilado ${pelicula.title} por ${pelicula.alquilerPrecio}€ por 48 horas`);
+      alert(`Has alquilado ${pelicula.title} por S/ ${pelicula.alquilerPrecio} por 48 horas`);
     }, 500);
   };
 
@@ -20,9 +20,10 @@ const RentalButton = ({ pelicula, onRent }) => {
       onClick={handleRent}
       disabled={isRenting}
     >
-      {isRenting ? 'Procesando...' : `Alquilar por ${pelicula.alquilerPrecio}€`}
+      {isRenting ? 'Procesando...' : `Alquilar por S/ ${pelicula.alquilerPrecio}`}
     </button>
   );
 };
+
 
 export default RentalButton;
