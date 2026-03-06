@@ -1,5 +1,3 @@
-/* styles/pages.css */
-
 /* Home Page */
 .principal-page__hero {
   background: linear-gradient(to right, #000000, #434343);
@@ -254,4 +252,5 @@
   .principal-page__title {
     font-size: 32px;
   }
+
 }
